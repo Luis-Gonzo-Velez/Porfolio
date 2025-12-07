@@ -28,25 +28,31 @@
           />
           <h1 class="porfolio-text">Luis Gonzalez Velez</h1>
 
-          <!-- Social media links -->
+          <!-- Social media links Icons -->
           <div class="social-network">
             <ul class="social-link">
               <li>
                 <a class="link" href="#"
-                  ><ion-icon class="social-icon" name="logo-github"></ion-icon
-                ></a>
-              </li>
-
-              <li>
-                <a class="link" href="#"
-                  ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+                  ><ion-icon
+                    class="social-icon github"
+                    name="logo-github"
+                  ></ion-icon
                 ></a>
               </li>
 
               <li>
                 <a class="link" href="#"
                   ><ion-icon
-                    class="social-icon"
+                    class="social-icon facebook"
+                    name="logo-facebook"
+                  ></ion-icon
+                ></a>
+              </li>
+
+              <li>
+                <a class="link" href="#"
+                  ><ion-icon
+                    class="social-icon instagram"
                     name="logo-instagram"
                   ></ion-icon
                 ></a>
@@ -60,35 +66,59 @@
 
               <li>
                 <a class="link" href="#"
-                  ><ion-icon class="social-icon" name="logo-whatsapp"></ion-icon
+                  ><ion-icon
+                    class="social-icon whatsapp"
+                    name="logo-whatsapp"
+                  ></ion-icon
                 ></a>
               </li>
             </ul>
           </div>
-
-          <div class="navigation">
-            <nav class="main-nav">
-              <ul class="main-nav-list">
-                <li><a class="main-nav-link" href="#">About</a></li>
-                <li><a class="main-nav-link" href="#">Work</a></li>
-                <li><a class="main-nav-link" href="#">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
+          <!-- INFORMATION LINKS  -->
+          <nav class="main-navigation">
+            <ul class="main-nav-list">
+              <li>
+                <ion-icon class="icons" name="person-outline"></ion-icon
+                ><a class="main-nav-link" href="#about-1">About</a>
+              </li>
+              <li>
+                <ion-icon class="icons" name="settings-outline"></ion-icon
+                ><a class="main-nav-link" href="#work-1">Work</a>
+              </li>
+              <li>
+                <ion-icon class="icons" name="globe-outline"></ion-icon
+                ><a class="main-nav-link" href="#contact-1">Contact</a>
+              </li>
+            </ul>
+          </nav>
         </header>
 
         <!-- Porfolio Img box -->
 
-        <div class="porfolio-container">
-          <img class="side-img" src="Img/logo img.jpg" alt="home back yard" />
-          <div class="img-box">
-            <h2 class="name">Luis Gonzalez Velez</h2>
-            <p class="job-description">Back End Web Developer</p>
-          </div>
+        <div class="image-container">
+          <img
+            class="image-container-img"
+            src="img/profecionalphoto.jpg"
+            alt="personal photo"
+          />
+          <!-- <h2 class="text">Junior Web Developer</h2> -->
         </div>
       </section>
+
       <!-- ABOUT SECTION -->
-      <section class="about">
+      <section id="about-1" class="about">
+        <div class="logo-box">
+          <div class="work-logos">
+            <img class="logos" src="Img/Syscofood.jpg" alt="Sysco food logo" />
+            <img class="logos" src="Img/ARMYlogo.jpg" alt="US ARMY logo logo" />
+            <img
+              class="logos"
+              src="Img/RBAlogo.jpg"
+              alt="Door and window company logo"
+            />
+          </div>
+        </div>
+
         <div class="information">
           <h2>About Me</h2>
           <p>
@@ -115,8 +145,6 @@
             <li>
               Carpentry Certification – Erwin Technical College (2023–2024)
             </li>
-            <li></li>
-            <li></li>
           </ul>
 
           <p>
@@ -134,9 +162,100 @@
             real-world challenges.
           </p>
         </div>
-        <div class="information">information</div>
+      </section>
+
+      <!-- WORK -->
+      <section id="work-1" class="work">
+        <h2>MY WORK</h2>
+        <div class="card">
+          <iframe src="Work/Challenge09-09-25/index.html"></iframe>
+          <div class="card-info">
+            <div class="card-body"></div>
+            <a
+              href="Work/Challenge10-06-25 Scrolling Option/index.html"
+              class="btn-secondary"
+              >View Project</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <iframe src="Work/Challenge09-26-25/index.html"></iframe>
+          <div class="card-info">
+            <div class="card-body"></div>
+            <a href="Work/Challenge09-26-25/index.html" class="btn-secondary"
+              >View Project</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <iframe
+            src="Work/Challenge10-06-25 Scrolling Option/index.html"
+          ></iframe>
+          <div class="card-info">
+            <div class="card-body"></div>
+            <a
+              href="Work/Challenge10-06-25 Scrolling Option/index.html"
+              class="btn-secondary"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT ME  -->
+      <section id="contact-1" class="work">
+        <form
+          id="contact-form"
+          action="https://formsubmit.co/moringo2311@gmail.com"
+          method="POST"
+        >
+          <div>
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              type="text"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              type="email"
+              required
+            />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Message from your porfoliosite"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div>
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Type your message"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
       </section>
     </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+    </footer>
 
     <script
       type="module"

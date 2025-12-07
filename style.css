@@ -1,5 +1,5 @@
 /* ******************** */
-/* SECTION HERO */
+/* SECTION HERO SIDE HEADER */
 /* ******************** */
 
 .section-hero {
@@ -10,9 +10,8 @@
 .side-header {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  background-color: #040b14;
+  background-color: #99b2d3;
   height: 100vh;
 }
 
@@ -28,22 +27,28 @@
 .porfolio-text {
   font-size: 2.4rem;
   font-weight: bold;
-  color: #f1f3f5;
+  color: #495057;
   margin: 1.6rem 0 0 0;
 }
+
+/* SOCIAL LINKS */
 
 .social-link {
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
+  justify-content: center;
   gap: 1.6rem;
   margin-top: 1.6rem;
+}
+
+.social-link li {
+  list-style: none;
 }
 
 .social-icon {
   width: 2.4rem;
   height: 2.4rem;
-  color: #f1f3f5;
+  color: #495057;
 }
 
 .social-icon:link,
@@ -59,75 +64,63 @@
   transform: scale(1.2);
 }
 
-.navigation {
+.github:hover {
+  color: #dde1e5;
+}
+
+.facebook:hover {
+  color: #1877f2;
+}
+
+.instagram:hover {
+  color: #e4405f;
+}
+
+.whatsapp:hover {
+  color: #25d366;
+}
+
+/* INFORMATION LINKS */
+
+.main-navigation {
+  margin-top: 9.6rem;
   display: flex;
-  justify-content: center;
-  align-items: start;
-  padding: 1.2rem;
 }
 
 .main-nav-list {
   display: flex;
   flex-direction: column;
+  gap: 3rem;
+  margin: 1.6rem;
   list-style: none;
-  margin-top: 1.6rem;
-  gap: 4rem;
-  font-size: 1.8rem;
+}
+.icons {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #495057;
+  margin-right: 1.6rem;
 }
 
 .main-nav-link {
-  color: #f1f3f5;
+  font-size: 1.8rem;
+  color: #495057;
   text-decoration: none;
+  font-family: inherit;
+  font-weight: 700;
 }
 
-.main-nav-link:link,
-.main-nav-link:visited {
-  color: #f1f3f5;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.main-nav-link:hover {
-  color: #868e96;
-  font-size: 2rem;
-}
-
-/* PORFOLIO IMAGE*/
-
-.porfolio-container {
-  display: grid;
-  position: relative;
-}
-
-.side-img {
+.image-container-img {
   width: 100%;
   height: 100vh;
-  /* object-fit: cover; */
-  z-index: -2;
+
+  opacity: 0.9;
 }
 
-.name {
-  position: absolute;
-  top: 35%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  color: #f1f3f5;
-  transform: translate(-50%, -50%);
+.text {
   font-size: 2.4rem;
   font-weight: 700;
-  font-family: inherit;
-}
-
-.job-description {
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  color: #f1f3f5;
-  transform: translate(-50%, -50%);
-  font-size: 1.8rem;
-  font-weight: 400;
-  font-family: inherit;
+  color: #495057;
+  margin: 9.6rem 10rem;
 }
 
 /* ABOUT SECTION */
@@ -138,21 +131,26 @@
   margin-top: 9.6rem;
 }
 
+.work-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 9.6rem;
+}
+
+.logos {
+  height: 100%;
+  width: auto;
+  mix-blend-mode: multiply;
+}
+
 .about h2 {
   padding: 1.6rem;
   font-size: 2.4rem;
   letter-spacing: 1.6;
   font-weight: 700;
   color: #040b14;
-  text-align: center;
-}
-
-.about h3 {
-  padding: 1.6rem;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #040b14;
-  text-align: center;
+  text-align: left;
 }
 
 .about p {
@@ -172,4 +170,154 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+}
+
+/* WORK CARD */
+
+.work {
+  margin-top: 9.6rem;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.2rem;
+  padding: 9.6rem;
+}
+
+.work h2 {
+  padding: 1.6rem;
+  font-size: 2.4rem;
+  letter-spacing: 1.6;
+  font-weight: 700;
+  color: #040b14;
+  text-align: center;
+}
+
+:root {
+  --card-bg: #99b2d3;
+  --text-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  width: 400px;
+  height: 400px;
+  position: relative; /* Essential for positioning internal elements */
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-radius: 12px;
+  word-wrap: break-word;
+  background: var(--card-bg);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  overflow: hidden; /* keep rounded corners for children */
+}
+
+/* Use .card-img (class) or .card img (element). Pick one consistently. */
+
+.card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  color: var(--text-color);
+  flex-grow: 1;
+}
+
+.btn-secondary {
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-size: 1.6rem;
+}
+
+/* CONTACT ME  */
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: inherit;
+}
+
+.contact-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 9.6rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 15px;
+  color: #2b2929;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #040b14;
+  border-radius: 4px;
+  font-size: 16px;
+}
+textarea {
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #040b14;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: vertical;
+}
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #040b14;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #99b2d3;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 9.6rem;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    padding: 0.5rem;
+  }
+  .card {
+    width: 100%;
+    flex-basis: auto;
+    margin-left: 0;
+  }
 }

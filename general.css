@@ -75,7 +75,7 @@ body {
 /****************************/
 
 .container {
-  max-width: 120rem;
+  width: 100%;
 }
 
 .grid {
@@ -104,4 +104,8 @@ body {
 
 .grid--center-v {
   align-items: center;
+}
+
+section {
+  box-shadow: 0 4px 12px 20px;
 }
